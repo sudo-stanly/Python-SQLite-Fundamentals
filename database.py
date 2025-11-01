@@ -2,19 +2,13 @@ import sqlite3
 
 conn = sqlite3.connect('customer.db')
 
-
 #create a cursor
 c = conn.cursor()
 
-#query the database
-c.execute("SELECT rowid, * FROM customers")
-
+c.execute("SELECT * FROM customers WHERE email LIKE '%codemy.com'")
 items = c.fetchall()
 for item in items:
     print(item)
-    
-
-
 
 print("\ncommand executed sucessfully...")
 conn.commit()

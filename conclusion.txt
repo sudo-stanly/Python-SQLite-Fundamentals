@@ -51,3 +51,7 @@
 
 #primary key id
 - sqlite creates another column of row id for each row of data
+
+
+#where clause
+use where and like clauses or operators for better querying
