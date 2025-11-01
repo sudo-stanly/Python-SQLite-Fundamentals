@@ -54,3 +54,19 @@ def add_many(list):
     print("\ncommand executed sucessfully...")
     conn.commit()
     conn.close()
+    
+    
+#lookup wit where
+def email_lookup(email):
+    # connect to database
+    conn = sqlite3.connect('./Fundamentals/customer.db')
+    c = conn.cursor()
+
+    c.execute("SELECT rowid,* FROM customers WHERE email=(?)",(email,))
+    items = c.fetchall()
+    for item in items:
+        print(item)
+
+    print("\ncommand executed sucessfully...")
+    conn.commit()
+    conn.close()

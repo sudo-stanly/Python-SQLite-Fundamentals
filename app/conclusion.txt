@@ -27,3 +27,7 @@ root directory
 #adding many records in table
 - since we're passing a list with items of tuples, in database.py the list parameter
   is passed inside the execution command
+
+
+#where function
+- where clause can be alot of variations, but we can specify for now for simple app
