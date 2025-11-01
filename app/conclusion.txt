@@ -1,0 +1,13 @@
+# create functions
+- take all command in a function that we can call from other file
+
+note:
+since we're implementing inside of directories we will use:
+  - by adding __init__.py the folder is considered a pacakge
+  - use command: python -m app.our_app
+  in terminal to access other file as pacakages
+  -m is a flag, that flags the folder as a pacakge and ables to access other sibling folder
+  'app' is the folder name 'our_app' is the file
+
+but if we're just creating everything without subfolder directory, we can simply run python file.py from the
+root directory
