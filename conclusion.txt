@@ -42,3 +42,8 @@
   query command: c.execute("SELECT * ALL FROM customers")
 - wrap the fetch command in a print function
   print(c.fetchall())
+
+  
+#format results
+- each item is numbered like indexing
+- format the output using for loop

@@ -8,11 +8,15 @@ c = conn.cursor()
 
 #query the database
 c.execute("SELECT * FROM customers")
-# c.fetchone()
-# c.fetchmany(3)
-print(c.fetchall())
+
+items = c.fetchall()
+print(" NAME " + "\t\t\tEMAIL\n----------------------- ------------------------")
+for item in items:
+    # print(item[0] , item[1], "", item[2])
+    fullname = item[0] + " " + item[1]
+    print(f"| {fullname:20} | {item[2]}")
 
 
-print("command executed sucessfully...")
+print("\ncommand executed sucessfully...")
 conn.commit()
 conn.close()
