@@ -7,14 +7,13 @@ conn = sqlite3.connect('customer.db')
 c = conn.cursor()
 
 #query the database
-c.execute("SELECT * FROM customers")
+c.execute("SELECT rowid, * FROM customers")
 
 items = c.fetchall()
-print(" NAME " + "\t\t\tEMAIL\n----------------------- ------------------------")
 for item in items:
-    # print(item[0] , item[1], "", item[2])
-    fullname = item[0] + " " + item[1]
-    print(f"| {fullname:20} | {item[2]}")
+    print(item)
+    
+
 
 
 print("\ncommand executed sucessfully...")

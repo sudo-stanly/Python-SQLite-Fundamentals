@@ -47,3 +47,7 @@
 #format results
 - each item is numbered like indexing
 - format the output using for loop
+
+
+#primary key id
+- sqlite creates another column of row id for each row of data
