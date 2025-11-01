@@ -23,3 +23,6 @@
 
 
 #insert one record into table
+- execute a command that inserts value into table, by inserting a record into table
+  we must match the number of columns to insert our values in.
+  command: c.execute("INSERT INTO customers VALUE('first_name', 'last_name', 'email')")
