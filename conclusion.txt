@@ -1,0 +1,8 @@
+
+- connecting to a non-existent database with sqlite-3 will create a database in the following directory.
+- we can create one by using memory but as soon as the program closes, the database gets deleted. 
+- memory database can be used later if there is something temporary we want to deal with.
+
+- run the file 'database.py' or whatever name, if no database is found it will create a database within
+  the directory.
+  command: python3 'database.py'

@@ -10,3 +10,8 @@ Purpose
     Combine guided learning (tutorials, examples) with self-paced exploration (practice exercises and small projects).
 
 Build a personal reference for database design and SQL queries that I can revisit anytime.
+
+
+
+# references:
+    -> codemy.com
