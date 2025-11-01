@@ -22,3 +22,8 @@ root directory
 - since we're passing a parameter, the key must be passed as a string and the command will translate it
   as a number
 - when passing to this parameter, convert to string instead or writing double quotes
+
+
+#adding many records in table
+- since we're passing a list with items of tuples, in database.py the list parameter
+  is passed inside the execution command

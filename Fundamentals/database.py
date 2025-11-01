@@ -41,3 +41,16 @@ def delete_one(id):
     print("\ncommand executed sucessfully...")
     conn.commit()
     conn.close()
+    
+    
+#add many
+def add_many(list):
+        # connect to database
+    conn = sqlite3.connect('./Fundamentals/customer.db')
+    c = conn.cursor()
+
+    c.executemany("INSERT INTO customers VALUES(?,?,?)",(list))
+
+    print("\ncommand executed sucessfully...")
+    conn.commit()
+    conn.close()
