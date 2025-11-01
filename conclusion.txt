@@ -74,3 +74,10 @@ use where and like clauses or operators for better querying
  - by using the conditional and/or querying will either return both true or only one as true
  - command for and: c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' AND rowid=3 ")
  - command for or: c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' OR rowid=3 ")
+
+
+ #limit records
+ - by limiting the query incase there are thousand of records, we can use the limit operator
+ - we can also ascend or descend the order or the queried result
+   command: c.execute("SELECT rowid,* FROM customers ORDER BY rowid DESC LIMIT 2")
+   command: c.execute("SELECT rowid,* FROM customers LIMIT 2")
