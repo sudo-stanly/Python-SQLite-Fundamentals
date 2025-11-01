@@ -1,8 +1,20 @@
 import sqlite3
 
-# creating a database
 conn = sqlite3.connect('customer.db')
 
-# creating a database by memory
-# conn = sqlite3.connect(':memory:')
 
+#create a cursor
+c = conn.cursor()
+
+
+#create a table
+c.execute("""
+    CREATE TABLE customers(
+        first_name text,
+        last_name text,
+        EMAIL text
+    );
+""")
+
+conn.commit()
+conn.close()
