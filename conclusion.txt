@@ -68,3 +68,9 @@ use where and like clauses or operators for better querying
 - order results by ascending or descending
  command for ordering by ascending (no keyword by default): c.execute("SELECT rowid,* FROM customers ORDER BY rowid")
  command for ordering by descending: c.execute("SELECT rowid,* FROM customers ORDER BY rowid DESC")
+
+
+ #and/ or
+ - by using the conditional and/or querying will either return both true or only one as true
+ - command for and: c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' AND rowid=3 ")
+ - command for or: c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' OR rowid=3 ")

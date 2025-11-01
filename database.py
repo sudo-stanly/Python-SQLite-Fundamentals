@@ -6,7 +6,7 @@ conn = sqlite3.connect('customer.db')
 c = conn.cursor()
 
 #query database - ORDER BY
-c.execute("SELECT rowid,* FROM customers ORDER BY last_name DESC")
+c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' OR rowid=3 ")
 items = c.fetchall()
 for item in items:
     print(item)
