@@ -34,3 +34,11 @@
   question marks to bypass, use the execute many command to insert many records.
   many_customers = [(..., ...,), (...,...), (...,...)]
   command: c.executemany("INSERT INTO customers VALUES(?,?,?), many_customers)
+
+
+#query and fetchall
+- query the database by using select command
+- to get the data use fetchone, or fetchmany how many we want, or fetchall
+  query command: c.execute("SELECT * ALL FROM customers")
+- wrap the fetch command in a print function
+  print(c.fetchall())
