@@ -81,3 +81,8 @@ use where and like clauses or operators for better querying
  - we can also ascend or descend the order or the queried result
    command: c.execute("SELECT rowid,* FROM customers ORDER BY rowid DESC LIMIT 2")
    command: c.execute("SELECT rowid,* FROM customers LIMIT 2")
+
+
+#deleting a table
+- by dropping
+  command: c.execute("DROP TABLE customers")
