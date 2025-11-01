@@ -5,12 +5,8 @@ conn = sqlite3.connect('customer.db')
 #create a cursor
 c = conn.cursor()
 
-#update records
-c.execute("DELETE FROM customers WHERE rowid=6")
-conn.commit()
-
-
-c.execute("SELECT rowid,* FROM customers")
+#query database - ORDER BY
+c.execute("SELECT rowid,* FROM customers ORDER BY last_name DESC")
 items = c.fetchall()
 for item in items:
     print(item)

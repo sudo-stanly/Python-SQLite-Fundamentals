@@ -62,3 +62,9 @@ use where and like clauses or operators for better querying
 
 
 #deleting record
+- command for deleting: c.execute("DELETE FROM customers where ROWID=6")
+
+#ordering results
+- order results by ascending or descending
+ command for ordering by ascending (no keyword by default): c.execute("SELECT rowid,* FROM customers ORDER BY rowid")
+ command for ordering by descending: c.execute("SELECT rowid,* FROM customers ORDER BY rowid DESC")
