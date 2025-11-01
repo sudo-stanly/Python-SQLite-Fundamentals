@@ -5,10 +5,10 @@ if os.path.exists("./Fundamentals"):
     from Fundamentals import database
     if os.path.exists("./Fundamentals/database.py"):
 
-        #add a record to the db
-        database.add_one("Laura","Smith","laura@smith.com")
+        #delete record use id as string
+        database.delete_one(str(6))
         
-        #show all the records
+        #display result
         database.show_all()
         
     else:

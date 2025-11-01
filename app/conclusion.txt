@@ -15,3 +15,10 @@ root directory
 
 #add a record function
 - by creating an add function to add one record at a time
+
+
+#deleting one record from a table
+- use primary key id
+- since we're passing a parameter, the key must be passed as a string and the command will translate it
+  as a number
+- when passing to this parameter, convert to string instead or writing double quotes

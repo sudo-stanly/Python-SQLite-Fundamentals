@@ -28,3 +28,16 @@ def add_one(first,last,email):
     print("\ncommand executed sucessfully...")
     conn.commit()
     conn.close()
+    
+
+#delete record from table
+def delete_one(id):
+    # connect to database
+    conn = sqlite3.connect('./Fundamentals/customer.db')
+    c = conn.cursor()
+
+    c.execute("DELETE FROM customers WHERE rowid=(?)", id)
+
+    print("\ncommand executed sucessfully...")
+    conn.commit()
+    conn.close()
