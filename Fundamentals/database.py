@@ -15,3 +15,16 @@ def show_all():
     print("\ncommand executed sucessfully...")
     conn.commit()
     conn.close()
+    
+
+#add a new record to the table
+def add_one(first,last,email):
+    # connect to database
+    conn = sqlite3.connect('./Fundamentals/customer.db')
+    c = conn.cursor()
+
+    c.execute("INSERT INTO customers VALUES(?,?,?)",(first, last, email))
+
+    print("\ncommand executed sucessfully...")
+    conn.commit()
+    conn.close()

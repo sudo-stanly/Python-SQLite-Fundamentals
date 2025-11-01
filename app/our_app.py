@@ -4,8 +4,11 @@ if os.path.exists("./Fundamentals"):
     
     from Fundamentals import database
     if os.path.exists("./Fundamentals/database.py"):
+
+        #add a record to the db
+        database.add_one("Laura","Smith","laura@smith.com")
         
-        # start here
+        #show all the records
         database.show_all()
         
     else:

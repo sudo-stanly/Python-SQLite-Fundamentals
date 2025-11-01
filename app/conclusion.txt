@@ -11,3 +11,7 @@ since we're implementing inside of directories we will use:
 
 but if we're just creating everything without subfolder directory, we can simply run python file.py from the
 root directory
+
+
+#add a record function
+- by creating an add function to add one record at a time
