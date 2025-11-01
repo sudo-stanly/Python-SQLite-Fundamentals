@@ -1,0 +1,92 @@
+# connecting/creating a database
+- connecting to a non-existent database with sqlite-3 will create a database in the following directory.
+- we can create one by using memory but as soon as the program closes, the database gets deleted. 
+- memory database can be used later if there is something temporary we want to deal with.
+- run the file 'database.py' or whatever name, if no database is found it will create a database within
+  the directory.
+  command: python3 'database.py'
+
+
+# creating a table
+- rows and columns same as other database like spreadsheets, excel
+- create a cursor
+- cursor is something what we want to tell the database to do
+- commit command to the database
+- close connection after creating a connection
+
+# data types in sqlite
+- NULL
+- INTEGER
+- REAL
+- TEXT
+- BLOB
+
+
+#insert one record into table
+- execute a command that inserts value into table, by inserting a record into table
+  we must match the number of columns to insert our values in.
+  command: c.execute("INSERT INTO customers VALUE('first_name', 'last_name', 'email')")
+
+
+#inserting many records into table
+- create a variable list with tuple as items inside the list, the fill the values for each column
+  after creating the list, add the variable after the insertion command, fill the columns with 
+  question marks to bypass, use the execute many command to insert many records.
+  many_customers = [(..., ...,), (...,...), (...,...)]
+  command: c.executemany("INSERT INTO customers VALUES(?,?,?), many_customers)
+
+
+#query and fetchall
+- query the database by using select command
+- to get the data use fetchone, or fetchmany how many we want, or fetchall
+  query command: c.execute("SELECT * ALL FROM customers")
+- wrap the fetch command in a print function
+  print(c.fetchall())
+
+  
+#format results
+- each item is numbered like indexing
+- format the output using for loop
+
+
+#primary key id
+- sqlite creates another column of row id for each row of data
+
+
+#where clause
+use where and like clauses or operators for better querying
+
+
+#update records
+- when updating a record, use primary key id
+
+
+#deleting record
+- command for deleting: c.execute("DELETE FROM customers where ROWID=6")
+
+#ordering results
+- order results by ascending or descending
+ command for ordering by ascending (no keyword by default): c.execute("SELECT rowid,* FROM customers ORDER BY rowid")
+ command for ordering by descending: c.execute("SELECT rowid,* FROM customers ORDER BY rowid DESC")
+
+
+ #and/ or
+ - by using the conditional and/or querying will either return both true or only one as true
+ - command for and: c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' AND rowid=3 ")
+ - command for or: c.execute("SELECT rowid,* FROM customers WHERE last_name LIKE 'Br%' OR rowid=3 ")
+
+
+ #limit records
+ - by limiting the query incase there are thousand of records, we can use the limit operator
+ - we can also ascend or descend the order or the queried result
+   command: c.execute("SELECT rowid,* FROM customers ORDER BY rowid DESC LIMIT 2")
+   command: c.execute("SELECT rowid,* FROM customers LIMIT 2")
+
+
+#deleting a table
+- by dropping
+  command: c.execute("DROP TABLE customers")
+
+
+
+# our app - show all function
