@@ -55,3 +55,7 @@
 
 #where clause
 use where and like clauses or operators for better querying
+
+
+#update records
+- when updating a record, use primary key id
